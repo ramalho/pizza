@@ -1,3 +1,5 @@
+# coding: utf-8
+
 from django.db import models
 
 class Cliente(models.Model):
@@ -12,5 +14,3 @@ class Cliente(models.Model):
     
     class Meta:
         unique_together = ['fone', 'ramal']
-        verbose_name = u'Freguês'
-        verbose_name_plural = u'Fregueses'
