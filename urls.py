@@ -1,7 +1,8 @@
 from django.conf.urls.defaults import *
 from django.views.generic.simple import direct_to_template
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from pizza.entrega.views import listar_pizzas
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -15,7 +16,10 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^admin/(.*)', admin.site.root),
     
-    (r'^$', direct_to_template, {'template': 'base.html'}),
+    (r'^$', direct_to_template, {'template': 'index.html'}),
+
+    (r'^preparo$', listar_pizzas),
+
 )
 
 from django.conf import settings

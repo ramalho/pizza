@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block titulo %}Fila de preparo{% endblock %}
+
+{% block miolo %}
+
+    <ul>
+    {% for pizza in pizzas %}
+        <li>{{pizza}}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
