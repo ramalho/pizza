@@ -51,16 +51,18 @@ class Pedido(models.Model):
     def entrou(self):
         return self.inclusao.strftime('%H:%M')
 
-    def despachado(self):
-        return (self.entregador is not None) and (self.partida is not None)
-    despachado.boolean = True
+    def nome_entregador(self):
+        return self.entregador and self.entregador or ''
 
-    def viagem(self):
-        if self.partida and self.entregador:
-            return u'%s - %s' % (self.partida.strftime('%H:%M'), self.entregador)
+    def partiu(self):
+        if self.partida:
+            return self.partida.strftime('%H:%M')
         else:
             return ''
-            
+
+    def despachado(self):
+        return (self.entregador is not None) and (self.partida is not None)
+    despachado.boolean = True            
 
 class Entregador(models.Model):
     nome = models.CharField(max_length=64)

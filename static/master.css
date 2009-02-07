@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;    
+}
+
+div.topo {
+    background-color: #FFC;
+    padding: 5px;
+}
+
+div.corpo {
+    padding: 5px;
+}
+
+h1 {
+    color: #720;
+}
