@@ -8,7 +8,7 @@ e devolve um item sorteado segundo a probabilidade relativa.
 A primeira linha da função calcula soma das probabilidades relativas::
 
   >>> vencedor = [(2,'Rex'), (1,'Fido')]
-  >>> reduce(lambda a,b:a+b, [p for p,q in vencedor])
+  >>> sum([p for p,q in vencedor])
   3
   
 Nos exemplos abaixo, parametrizamos o valor de i em vez de sortear, para 
@@ -41,7 +41,7 @@ Agora vamos repetir 10000 vezes com valores aleatórios, e verificar que
 from random import randrange
 
 def selecao_prob(probs, i=None):
-    prob_tot = reduce(lambda a,b:a+b, [p for p,x in probs])
+    prob_tot = sum([p for p,x in probs])
     if i is None:
         i = randrange(prob_tot)
     tot = 0

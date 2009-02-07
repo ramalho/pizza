@@ -1,0 +1,18 @@
+Alho: alho frito e Azeitonas
+Aliche: aliche, alho e salsinha
+À Moda da Casa: presunto, ervilhas cobertas com mussarela e salpicadas com azeitonas
+Atum: atum e cebola
+Calabresa: calabresa e cebola
+Catupiry: catupiry salpicado com parmesão
+Champignon com Catupiry: catupiry, champignon e parmesão
+Champignon: champignon, aliche, alho, mussarela, cebola e salsinha 
+Escarola: escarola temporada com alho, aliche e mussarela
+Frango com Catupiry: peito de frango desfiado, catupiry e parmesão
+Lombo com Catupiry: lombo, catupiry e salsinha
+Marguerita: mussarela e manjericão
+Milho Verde: milho verde, mussarela e salsinha
+Mussarela: mussarela com molho de tomate
+Napolitana: mussarela, rodelas de tomate, salsinha e parmesão
+Portuguesa: presunto, ovos e cebola
+Quatro Queijos: mussarela, provolone, catupiry e parmesão
+Romana: mussarela, aliche, salsinha, alho e cebola
