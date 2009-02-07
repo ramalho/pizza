@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block titulo %}Pedido #{{ped.id}}{% endblock %}
+
+{% block miolo %}
+
+<form action="/pedido">
+    ID do pedido: <input name="id_pedido" value="{{ped.id}}">
+    <input type="submit" value="buscar">
+</form>
+
+{% if msg %}
+    <div class="alerta">{{msg}}</div>
+{% endif %}    
+
+
+{% if ped %}
+    <dl>
+        <dt>cliente</dt>
+            <dd>{{ped.cliente}}</dd>
+        <dt>inclusao</dt>
+            <dd>{{ped.inclusao}}</dd>
+        <dt>entregador</dt>
+            <dd>{{ped.entregador}}</dd>
+        <dt>partida</dt>
+            <dd>{{ped.pardida}}</dd>
+    </dl>
+    <h3>pizzas</h3>
+    <ol>
+        {% for pizza in ped.pizza_set.all %}
+            <li>{{pizza}}</li>
+        {% endfor %}
+    </ol>
+{% endif %}
+
+
+{% endblock %}

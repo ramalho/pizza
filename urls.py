@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 from django.views.generic.simple import direct_to_template
 from django.contrib import admin
-from pizza.entrega.views import listar_pizzas
+from pizza.entrega.views import listar_pizzas, ver_pedido, cadastrar_cliente
 
 admin.autodiscover()
 
@@ -18,8 +18,9 @@ urlpatterns = patterns('',
     
     (r'^$', direct_to_template, {'template': 'index.html'}),
 
-    (r'^preparo$', listar_pizzas),
-
+    (r'^preparo/$', listar_pizzas),
+    (r'^pedido/$', ver_pedido),
+    (r'^cadastro/$', cadastrar_cliente),
 )
 
 from django.conf import settings

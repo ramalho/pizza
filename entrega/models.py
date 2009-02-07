@@ -24,15 +24,15 @@ class Cliente(models.Model):
     def __unicode__(self):
         fone = self.fone
         if self.ddd != DDD_DEFAULT:
-            fone = '(%s)%s' % (self.ddd, fone)
+            fone = u'(%s)%s' % (self.ddd, fone)
         if self.ramal:
             fone += ' r.' + self.ramal
         return u'%s - %s' % (fone, self.contato)
 
     def endereco(self):
-        end = '%s, %s' % (self.logradouro, self.numero)
+        end = u'%s, %s' % (self.logradouro, self.numero)
         if self.complemento:
-            end += ', ' + self.complemento
+            end += u', ' + self.complemento
         return end
     endereco.short_description = u'endereço'
     
